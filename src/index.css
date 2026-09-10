@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+/* ===================================================================
+   KING'S GYM — Premium Luxury Fitness Design System
+   Dark Luxury · Metallic Champagne Gold · Editorial Typography
+   =================================================================== */
+
+@theme {
+  /* Brand Theme Colors */
+  --color-brand-black: #060608;
+  --color-brand-dark: #0d0d12;
+  --color-brand-surface: #14141c;
+  --color-brand-elevated: #1c1c28;
+
+  --color-gold-50: #fffdf5;
+  --color-gold-100: #fff9e6;
+  --color-gold-200: #fff0bf;
+  --color-gold-300: #ffe48f;
+  --color-gold-400: #f5cf53;
+  --color-gold-500: #dfb12e;
+  --color-gold-600: #b88d1d;
+  --color-gold-700: #8c670f;
+  --color-gold-800: #66490c;
+  --color-gold-900: #422e06;
+
+  /* Typography */
+  --font-display: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Syne', 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-royal: 'Cinzel', serif;
+}
+
+/* ===================================================================
+   GLOBAL STYLES & RESET
+   =================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #060608;
+  color: #f3f4f6;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #060608;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(223, 177, 46, 0.08), transparent),
+    radial-gradient(circle at 100% 60%, rgba(223, 177, 46, 0.03), transparent 50%),
+    radial-gradient(circle at 0% 80%, rgba(223, 177, 46, 0.03), transparent 50%);
+  color: #e5e7eb;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060608;
+}
+::-webkit-scrollbar-thumb {
+  background: #272733;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dfb12e;
+}
+
+::selection {
+  background: #dfb12e;
+  color: #000000;
+}
+
+/* ===================================================================
+   TEXT & GRADIENT UTILITIES
+   =================================================================== */
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  word-spacing: 0.12em;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: 0.02em;
+  word-spacing: 0.12em;
+}
+
+.font-royal {
+  font-family: var(--font-royal);
+  word-spacing: 0.15em;
+}
+
+h1, h2, h3, h4 {
+  word-spacing: 0.12em;
+}
+
+/* Metallic Champagne Gold Text Gradient */
+.text-gradient-gold,
+.gold-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #fef3c7 30%, #f5cf53 70%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-silver {
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===================================================================
+   LUXURY CARD & GLASS MORPHISM COMPONENTS
+   =================================================================== */
+
+/* Sleek dark glass card */
+.glass-card {
+  background: rgba(18, 18, 24, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-card:hover {
+  border-color: rgba(223, 177, 46, 0.35);
+  box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.8), 0 0 24px -4px rgba(223, 177, 46, 0.12);
+}
+
+/* Gold Badge Pill */
+.badge-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(223, 177, 46, 0.08);
+  border: 1px solid rgba(223, 177, 46, 0.25);
+  border-radius: 9999px;
+  color: #f5cf53;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Primary Gold Button */
+.btn-gold {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: linear-gradient(135deg, #f5cf53 0%, #dfb12e 50%, #b88d1d 100%);
+  color: #000000;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 0.75rem;
+  border: 1px solid #fef08a;
+  box-shadow: 0 4px 20px -2px rgba(223, 177, 46, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px -2px rgba(223, 177, 46, 0.5);
+  filter: brightness(1.05);
+}
+
+.btn-gold:active {
+  transform: translateY(0);
+}
+
+/* Secondary Ghost Button */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e5e7eb;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 0.75rem;
+  backdrop-filter: blur(12px);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(223, 177, 46, 0.4);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Ken Burns Subtle Animation */
+@keyframes kenBurnsSlow {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+.animate-ken-burns {
+  animation: kenBurnsSlow 24s ease-in-out infinite;
+}
