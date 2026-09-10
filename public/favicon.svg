@@ -1,27 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <defs>
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFF0A0" />
-      <stop offset="40%" stop-color="#F5CF53" />
-      <stop offset="75%" stop-color="#DFB12E" />
-      <stop offset="100%" stop-color="#B88D1D" />
+    <!-- Navbar Logo Background Gradient: from amber-400 to amber-700 -->
+    <linearGradient id="navAmberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="45%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
     </linearGradient>
-    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#1A1812" />
-      <stop offset="100%" stop-color="#060608" />
-    </radialGradient>
   </defs>
-  
-  <!-- Rounded Base Background -->
-  <rect width="64" height="64" rx="16" fill="url(#bgGrad)" />
-  <rect width="62" height="62" x="1" y="1" rx="15" stroke="url(#goldGrad)" stroke-width="1.5" stroke-opacity="0.6" fill="none" />
-  
-  <!-- Royal Crown Emblem -->
-  <path d="M15 45L18 25L27 34L32 19L37 34L46 25L49 45H15Z" fill="url(#goldGrad)" />
-  <circle cx="32" cy="17" r="2.5" fill="#FFF8D0" />
-  <circle cx="18" cy="23" r="2" fill="#FFF8D0" />
-  <circle cx="46" cy="23" r="2" fill="#FFF8D0" />
-  
-  <!-- Crown Base Stripe -->
-  <rect x="15" y="44" width="34" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.9" />
+
+  <!-- Navbar Logo Rounded Emblem Box with Yellow-200 Border -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#navAmberGrad)" stroke="#fef08a" stroke-width="2.5" />
+
+  <!-- Navbar Lucide Crown Emblem (Exact match to Navbar icon) -->
+  <g transform="translate(14, 14) scale(1.5)" fill="none" stroke="#000000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" />
+    <path d="M5 21h14" />
+  </g>
 </svg>
