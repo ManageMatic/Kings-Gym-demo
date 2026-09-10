@@ -57,37 +57,49 @@
 ```bash
 Kings-Gym/
 ├── public/
+│   ├── favicon.svg          # Gold Royal Crown vector favicon emblem
 │   └── images/              # High-resolution gym photography and branch assets
 ├── src/
 │   ├── components/
-│   │   ├── BranchCard.tsx       # Individual branch showcase card
-│   │   ├── BranchSelector.tsx   # Interactive 3-branch switcher & Surat locator
-│   │   ├── FloatingWhatsApp.tsx # Floating WhatsApp chat assistance widget
-│   │   ├── Footer.tsx           # Comprehensive multi-branch footer & social channels
-│   │   ├── GalleryGrid.tsx      # Filterable photo gallery with centered lightbox & swipe
-│   │   ├── Hero.tsx             # Cinematic hero with brand tagline & CTAs
-│   │   ├── MembershipCard.tsx   # Membership tier card
-│   │   ├── MembershipModal.tsx  # Join membership interactive form modal
-│   │   ├── Navbar.tsx           # Fixed blur header with mobile overlay drawer
-│   │   ├── ProgramCard.tsx      # Training protocol card
-│   │   ├── SectionHeading.tsx   # Typography-optimized reusable section title
-│   │   ├── SocialIcons.tsx      # Official SVG icons (WhatsApp, Instagram, Facebook, YouTube)
-│   │   ├── TestimonialCard.tsx  # Member review card with star ratings
-│   │   ├── TrainerCard.tsx      # Certified coach profile card
-│   │   ├── TransformationCard.tsx # Member transformation showcase
-│   │   └── TrialModal.tsx       # 1-Day free trial pass booking modal
+│   │   ├── cards/           # Feature and entity display cards
+│   │   │   ├── BranchCard.tsx
+│   │   │   ├── MembershipCard.tsx
+│   │   │   ├── ProgramCard.tsx
+│   │   │   ├── TestimonialCard.tsx
+│   │   │   ├── TrainerCard.tsx
+│   │   │   └── TransformationCard.tsx
+│   │   ├── common/          # Reusable shared UI primitives & brand icons
+│   │   │   ├── SectionHeading.tsx
+│   │   │   └── SocialIcons.tsx
+│   │   ├── layout/          # Navigation, footer & fixed assistance widgets
+│   │   │   ├── FloatingWhatsApp.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   └── Navbar.tsx
+│   │   ├── modals/          # Interactive overlay dialogs & lead forms
+│   │   │   ├── MembershipModal.tsx
+│   │   │   └── TrialModal.tsx
+│   │   └── sections/        # High-level compound landing sections
+│   │       ├── BranchSelector.tsx
+│   │       ├── GalleryGrid.tsx
+│   │       └── Hero.tsx
 │   ├── data/
-│   │   ├── branches.ts          # Surat branch details, amenities, addresses, maps URLs
-│   │   ├── gallery.ts           # Gallery photos, equipment specs, social posts
-│   │   ├── memberships.ts       # Pricing plans & perk comparisons
-│   │   ├── programs.ts          # Training protocols & goal split definitions
-│   │   ├── testimonials.ts      # Member reviews & transformations
-│   │   └── trainers.ts          # Coach bios, specialties, accreditations
+│   │   ├── branches.ts      # Surat branch details, amenities, addresses, maps URLs
+│   │   ├── gallery.ts       # Gallery photos, equipment specs, social posts
+│   │   ├── memberships.ts   # Pricing plans & perk comparisons
+│   │   ├── programs.ts      # Training protocols & goal split definitions
+│   │   ├── testimonials.ts  # Member reviews & transformations
+│   │   └── trainers.ts      # Coach bios, specialties, accreditations
 │   ├── pages/
-│   │   └── Home.tsx             # Primary single-page application experience
-│   ├── App.tsx                  # Main router setup
-│   ├── index.css                # Tailwind CSS v4 design system, font variables, keyframes
-│   └── main.tsx                 # React entry point
+│   │   ├── Branches.tsx     # Dedicated branches explorer view
+│   │   ├── Contact.tsx      # Multi-branch contact & inquiry page
+│   │   ├── Gallery.tsx      # High-definition photo showcase
+│   │   ├── Home.tsx         # Primary single-page landing experience
+│   │   ├── Membership.tsx   # Membership tiers and perks comparison
+│   │   └── Programs.tsx     # Training protocols & workout goal matcher
+│   ├── App.tsx              # Main router setup
+│   ├── index.css            # Tailwind CSS v4 design system, font variables, keyframes
+│   └── main.tsx             # React entry point
+├── index.html               # HTML entry with royal crown favicon
 ├── package.json
 ├── tsconfig.json
 └── vite.config.ts

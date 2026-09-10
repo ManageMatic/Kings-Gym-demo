@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
-import type { Program } from '../data/programs'
+import type { Program } from '../../data/programs'
 
 interface ProgramCardProps {
   program: Program
@@ -42,7 +42,7 @@ export const ProgramCard: React.FC<ProgramCardProps> = ({ program, onJoinClick }
           <span className="text-[10px] uppercase tracking-wider text-amber-300/90 font-semibold block">
             {program.subtitle}
           </span>
-          <h3 className="text-xl font-bold font-display text-white uppercase tracking-tight group-hover:text-gradient-gold transition-colors">
+          <h3 className="text-xl font-bold font-display text-white uppercase tracking-tight group-hover:text-amber-300 transition-colors">
             {program.title}
           </h3>
         </div>

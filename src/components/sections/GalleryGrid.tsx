@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ChevronLeft, ChevronRight, Maximize2, MapPin } from 'lucide-react'
-import { galleryItems } from '../data/gallery'
-import type { GalleryItem } from '../data/gallery'
+import { galleryItems } from '../../data/gallery'
+import type { GalleryItem } from '../../data/gallery'
 
 export default function GalleryGrid() {
   const [activeFilter, setActiveFilter] = useState<string>('all')

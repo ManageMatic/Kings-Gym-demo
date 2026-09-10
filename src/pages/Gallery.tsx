@@ -1,18 +1,16 @@
 import { useState } from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import FloatingWhatsApp from '../components/FloatingWhatsApp'
-import SectionHeading from '../components/SectionHeading'
-import GalleryGrid from '../components/GalleryGrid'
-import MembershipModal from '../components/MembershipModal'
-import CustomCursor from '../components/CustomCursor'
+import Navbar from '../components/layout/Navbar'
+import Footer from '../components/layout/Footer'
+import FloatingWhatsApp from '../components/layout/FloatingWhatsApp'
+import SectionHeading from '../components/common/SectionHeading'
+import GalleryGrid from '../components/sections/GalleryGrid'
+import MembershipModal from '../components/modals/MembershipModal'
 
 export default function GalleryPage() {
   const [membershipOpen, setMembershipOpen] = useState(false)
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-gold-500 selection:text-black pt-28">
-      <CustomCursor />
       <Navbar onJoinClick={() => setMembershipOpen(true)} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

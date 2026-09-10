@@ -105,7 +105,6 @@ export default function Hero({ onJoinClick, onExploreClick }: HeroProps) {
         >
           Three locations. One standard of excellence.
         </motion.p>
-
       </div>
     </section>
   )

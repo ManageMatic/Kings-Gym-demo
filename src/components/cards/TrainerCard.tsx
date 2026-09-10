@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Award, Quote, ChevronRight, X } from 'lucide-react'
-import type { Trainer } from '../data/trainers'
+import type { Trainer } from '../../data/trainers'
 
 interface TrainerCardProps {
   trainer: Trainer

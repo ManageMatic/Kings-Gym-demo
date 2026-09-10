@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Crown, CheckCircle2 } from 'lucide-react'
-import { branches } from '../data/branches'
-import { membershipPlans } from '../data/memberships'
-import { trainingGoals } from '../data/programs'
+import { branches } from '../../data/branches'
+import { membershipPlans } from '../../data/memberships'
+import { trainingGoals } from '../../data/programs'
 
 interface MembershipModalProps {
   isOpen: boolean
@@ -45,12 +45,12 @@ export const MembershipModal: React.FC<MembershipModalProps> = ({
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           onClick={(e) => e.stopPropagation()}
-          className="w-full max-w-lg rounded-3xl bg-gradient-to-b from-zinc-900 via-zinc-950 to-black border border-gold-500/40 p-6 sm:p-8 shadow-2xl relative my-8"
+          className="w-full max-w-lg rounded-3xl bg-gradient-to-b from-zinc-900 via-zinc-950 to-black border border-amber-400/40 p-6 sm:p-8 shadow-2xl relative my-8"
         >
           {/* Close button */}
           <button
             onClick={handleResetAndClose}
-            className="absolute top-5 right-5 p-2 rounded-full bg-zinc-900 text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
+            className="absolute top-5 right-5 p-2 rounded-full bg-zinc-900 text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors cursor-pointer"
             aria-label="Close"
           >
             <X className="w-5 h-5" />
@@ -60,7 +60,7 @@ export const MembershipModal: React.FC<MembershipModalProps> = ({
             <div>
               {/* Modal Header */}
               <div className="text-center space-y-2 mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-gold-400 to-amber-700 flex items-center justify-center mx-auto shadow-lg shadow-gold-500/20 border border-gold-300">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-700 flex items-center justify-center mx-auto shadow-lg shadow-amber-500/20 border border-amber-300">
                   <Crown className="w-6 h-6 text-black" />
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-black font-display text-white uppercase tracking-tight">
@@ -83,7 +83,7 @@ export const MembershipModal: React.FC<MembershipModalProps> = ({
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     placeholder="e.g. Rahul Sharma"
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-zinc-700 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 text-white text-sm placeholder:text-zinc-600 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-zinc-700 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 text-white text-sm placeholder:text-zinc-600 outline-none transition-all"
                   />
                 </div>
 
@@ -97,7 +97,7 @@ export const MembershipModal: React.FC<MembershipModalProps> = ({
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="+91 98XXX XXXXX"
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-zinc-700 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 text-white text-sm placeholder:text-zinc-600 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-zinc-700 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 text-white text-sm placeholder:text-zinc-600 outline-none transition-all"
                   />
                 </div>
 
@@ -109,7 +109,7 @@ export const MembershipModal: React.FC<MembershipModalProps> = ({
                     <select
                       value={selectedBranch}
                       onChange={(e) => setSelectedBranch(e.target.value)}
-                      className="w-full px-3 py-3 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-gold-400 text-white text-xs outline-none cursor-pointer"
+                      className="w-full px-3 py-3 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-amber-400 text-white text-xs outline-none cursor-pointer"
                     >
                       {branches.map((b) => (
                         <option key={b.id} value={b.id}>
@@ -126,7 +126,7 @@ export const MembershipModal: React.FC<MembershipModalProps> = ({
                     <select
                       value={selectedPlan}
                       onChange={(e) => setSelectedPlan(e.target.value)}
-                      className="w-full px-3 py-3 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-gold-400 text-white text-xs outline-none cursor-pointer"
+                      className="w-full px-3 py-3 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-amber-400 text-white text-xs outline-none cursor-pointer"
                     >
                       {membershipPlans.map((p) => (
                         <option key={p.id} value={p.id}>
@@ -144,7 +144,7 @@ export const MembershipModal: React.FC<MembershipModalProps> = ({
                   <select
                     value={fitnessGoal}
                     onChange={(e) => setFitnessGoal(e.target.value)}
-                    className="w-full px-3 py-3 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-gold-400 text-white text-xs outline-none cursor-pointer"
+                    className="w-full px-3 py-3 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-amber-400 text-white text-xs outline-none cursor-pointer"
                   >
                     {trainingGoals.map((g) => (
                       <option key={g.id} value={g.id}>
@@ -157,7 +157,7 @@ export const MembershipModal: React.FC<MembershipModalProps> = ({
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full py-3.5 rounded-xl font-black text-xs uppercase tracking-wider bg-gradient-to-r from-gold-400 via-gold-500 to-amber-600 text-black shadow-lg shadow-gold-500/25 hover:brightness-110 active:scale-98 transition-all"
+                    className="w-full py-3.5 rounded-xl font-black text-xs uppercase tracking-wider bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-black shadow-lg shadow-amber-500/25 hover:brightness-110 active:scale-98 transition-all cursor-pointer"
                   >
                     REQUEST MEMBERSHIP
                   </button>
@@ -169,12 +169,12 @@ export const MembershipModal: React.FC<MembershipModalProps> = ({
             </div>
           ) : (
             <div className="text-center py-6 space-y-4">
-              <div className="w-16 h-16 rounded-full bg-gold-400/20 border border-gold-400/40 text-gold-400 flex items-center justify-center mx-auto shadow-xl">
+              <div className="w-16 h-16 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-400 flex items-center justify-center mx-auto shadow-xl">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
 
               <div className="space-y-1">
-                <span className="text-xs uppercase tracking-widest text-gold-400 font-bold">
+                <span className="text-xs uppercase tracking-widest text-amber-400 font-bold">
                   KING'S GYM SURAT
                 </span>
                 <h3 className="text-3xl font-black font-display text-white uppercase">
@@ -195,7 +195,7 @@ export const MembershipModal: React.FC<MembershipModalProps> = ({
               <div className="pt-4">
                 <button
                   onClick={handleResetAndClose}
-                  className="px-8 py-3 rounded-xl bg-gold-400 text-black font-bold text-xs uppercase tracking-wider hover:bg-gold-300 transition-colors"
+                  className="px-8 py-3 rounded-xl bg-amber-400 text-black font-bold text-xs uppercase tracking-wider hover:bg-amber-300 transition-colors cursor-pointer"
                 >
                   CLOSE
                 </button>

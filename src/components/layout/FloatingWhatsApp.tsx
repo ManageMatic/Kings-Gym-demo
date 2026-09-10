@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Crown } from 'lucide-react'
-import { branches } from '../data/branches'
-import { WhatsAppIcon } from './SocialIcons'
+import { branches } from '../../data/branches'
+import { WhatsAppIcon } from '../common/SocialIcons'
 
 interface FloatingWhatsAppProps {
   onJoinClick: () => void
@@ -33,7 +33,7 @@ export default function FloatingWhatsApp({ onJoinClick }: FloatingWhatsAppProps)
             <div className="bg-gradient-to-r from-emerald-600 to-teal-700 p-4 text-white flex items-center justify-between">
               <div className="flex items-center gap-2.5">
                 <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center border border-white/30">
-                  <Crown className="w-5 h-5 text-gold-300" />
+                  <Crown className="w-5 h-5 text-amber-300" />
                 </div>
                 <div>
                   <h4 className="text-sm font-bold font-display uppercase tracking-wider">
@@ -47,7 +47,7 @@ export default function FloatingWhatsApp({ onJoinClick }: FloatingWhatsAppProps)
               </div>
               <button
                 onClick={() => setChatOpen(false)}
-                className="p-1.5 rounded-full hover:bg-white/10 text-white"
+                className="p-1.5 rounded-full hover:bg-white/10 text-white cursor-pointer"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -57,7 +57,7 @@ export default function FloatingWhatsApp({ onJoinClick }: FloatingWhatsAppProps)
             <div className="p-4 bg-zinc-900/95 space-y-3 max-h-72 overflow-y-auto">
               {/* Bot greeting */}
               <div className="p-3 rounded-2xl bg-zinc-800 text-xs text-zinc-200 border border-zinc-700/60 max-w-[85%] space-y-1">
-                <p className="font-bold text-gold-400">👑 Welcome to the Kingdom!</p>
+                <p className="font-bold text-amber-400">👑 Welcome to the Kingdom!</p>
                 <p>How can we assist your fitness journey in Surat today?</p>
                 <span className="text-[9px] text-zinc-500 block text-right">Just now</span>
               </div>
@@ -70,7 +70,7 @@ export default function FloatingWhatsApp({ onJoinClick }: FloatingWhatsAppProps)
                 <select
                   value={selectedBranch}
                   onChange={(e) => setSelectedBranch(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg bg-zinc-950 border border-zinc-700 text-white text-xs outline-none focus:border-emerald-500"
+                  className="w-full px-3 py-2 rounded-lg bg-zinc-950 border border-zinc-700 text-white text-xs outline-none focus:border-emerald-500 cursor-pointer"
                 >
                   {branches.map((b) => (
                     <option key={b.id} value={b.id}>

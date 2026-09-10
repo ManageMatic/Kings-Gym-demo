@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Check, Crown, Sparkles, ArrowRight } from 'lucide-react'
-import type { MembershipPlan } from '../data/memberships'
+import type { MembershipPlan } from '../../data/memberships'
 
 interface MembershipCardProps {
   plan: MembershipPlan

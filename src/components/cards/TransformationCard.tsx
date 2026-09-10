@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Quote, Flame, Clock, Trophy } from 'lucide-react'
-import type { Transformation } from '../data/testimonials'
+import type { Transformation } from '../../data/testimonials'
 
 interface TransformationCardProps {
   transformation: Transformation
@@ -12,7 +12,7 @@ export const TransformationCard: React.FC<TransformationCardProps> = ({ transfor
     <motion.div
       whileHover={{ y: -6 }}
       transition={{ duration: 0.3 }}
-      className="rounded-3xl overflow-hidden bg-zinc-950 border border-zinc-800/90 hover:border-gold-500/50 shadow-2xl flex flex-col justify-between relative group"
+      className="rounded-3xl overflow-hidden bg-zinc-950 border border-zinc-800/90 hover:border-amber-400/50 shadow-2xl flex flex-col justify-between relative group"
     >
       {/* Visual Header with Overlay */}
       <div className="relative h-56 sm:h-64 overflow-hidden">
@@ -32,7 +32,7 @@ export const TransformationCard: React.FC<TransformationCardProps> = ({ transfor
 
         {/* Duration Badge */}
         <div className="absolute top-3.5 right-3.5 flex items-center gap-1 px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-zinc-900/80 backdrop-blur-md text-zinc-300">
-          <Clock className="w-3 h-3 text-gold-400" />
+          <Clock className="w-3 h-3 text-amber-400" />
           <span>{transformation.duration}</span>
         </div>
 
@@ -52,14 +52,14 @@ export const TransformationCard: React.FC<TransformationCardProps> = ({ transfor
           </div>
 
           {/* After */}
-          <div className="p-2.5 rounded-xl bg-gold-500/20 backdrop-blur-md border border-gold-500/50 text-center">
-            <span className="text-[9px] uppercase tracking-widest text-gold-400 font-bold block">
+          <div className="p-2.5 rounded-xl bg-amber-500/20 backdrop-blur-md border border-amber-500/50 text-center">
+            <span className="text-[9px] uppercase tracking-widest text-amber-400 font-bold block">
               ACHIEVED
             </span>
             <span className="text-lg font-black font-display text-gradient-gold">
               {transformation.afterStat}
             </span>
-            <span className="text-[9px] text-gold-300/80 block truncate">
+            <span className="text-[9px] text-amber-300/80 block truncate">
               {transformation.afterLabel}
             </span>
           </div>
@@ -69,7 +69,7 @@ export const TransformationCard: React.FC<TransformationCardProps> = ({ transfor
       {/* Testimonial & Identity */}
       <div className="p-5 flex-1 flex flex-col justify-between gap-4">
         <div>
-          <div className="flex items-center gap-1.5 text-xs text-gold-400 font-bold uppercase tracking-wider">
+          <div className="flex items-center gap-1.5 text-xs text-amber-400 font-bold uppercase tracking-wider">
             <Trophy className="w-3.5 h-3.5" />
             <span>{transformation.goal}</span>
           </div>
@@ -79,7 +79,7 @@ export const TransformationCard: React.FC<TransformationCardProps> = ({ transfor
           </h4>
 
           <div className="mt-3 p-3.5 rounded-xl bg-black/50 border border-zinc-900 flex items-start gap-2">
-            <Quote className="w-4 h-4 text-gold-400 shrink-0 mt-0.5" />
+            <Quote className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
             <p className="text-xs text-zinc-300 italic font-light leading-relaxed">
               "{transformation.quote}"
             </p>
@@ -87,8 +87,8 @@ export const TransformationCard: React.FC<TransformationCardProps> = ({ transfor
         </div>
 
         <div className="pt-2 flex items-center justify-between text-[11px] text-zinc-500 border-t border-zinc-900">
-          <span className="flex items-center gap-1 text-gold-400/80">
-            <Flame className="w-3 h-3 text-gold-400" />
+          <span className="flex items-center gap-1 text-amber-400/80">
+            <Flame className="w-3 h-3 text-amber-400" />
             <span>Verified King's Blueprint</span>
           </span>
           <span>Surat Gym Floor</span>

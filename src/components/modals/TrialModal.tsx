@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Flame, CheckCircle2, Calendar, Clock, MapPin } from 'lucide-react'
-import { branches } from '../data/branches'
+import { branches } from '../../data/branches'
 
 interface TrialModalProps {
   isOpen: boolean
@@ -38,12 +38,12 @@ export const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           onClick={(e) => e.stopPropagation()}
-          className="w-full max-w-lg rounded-3xl bg-gradient-to-b from-zinc-900 via-zinc-950 to-black border border-gold-500/40 p-6 sm:p-8 shadow-2xl relative my-8"
+          className="w-full max-w-lg rounded-3xl bg-gradient-to-b from-zinc-900 via-zinc-950 to-black border border-amber-400/40 p-6 sm:p-8 shadow-2xl relative my-8"
         >
           {/* Close button */}
           <button
             onClick={handleResetAndClose}
-            className="absolute top-5 right-5 p-2 rounded-full bg-zinc-900 text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"
+            className="absolute top-5 right-5 p-2 rounded-full bg-zinc-900 text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors cursor-pointer"
             aria-label="Close"
           >
             <X className="w-5 h-5" />
@@ -53,7 +53,7 @@ export const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
             <div>
               {/* Modal Header */}
               <div className="text-center space-y-2 mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-gold-400 to-amber-700 flex items-center justify-center mx-auto shadow-lg shadow-gold-500/20 border border-gold-300">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-700 flex items-center justify-center mx-auto shadow-lg shadow-amber-500/20 border border-amber-300">
                   <Flame className="w-6 h-6 text-black" />
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-black font-display text-white uppercase tracking-tight">
@@ -76,7 +76,7 @@ export const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="e.g. Hardik Patel"
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-zinc-700 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 text-white text-sm placeholder:text-zinc-600 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-zinc-700 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 text-white text-sm placeholder:text-zinc-600 outline-none transition-all"
                   />
                 </div>
 
@@ -90,7 +90,7 @@ export const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="+91 98XXX XXXXX"
-                    className="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-zinc-700 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 text-white text-sm placeholder:text-zinc-600 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-zinc-900/90 border border-zinc-700 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 text-white text-sm placeholder:text-zinc-600 outline-none transition-all"
                   />
                 </div>
 
@@ -101,7 +101,7 @@ export const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
                   <select
                     value={branch}
                     onChange={(e) => setBranch(e.target.value)}
-                    className="w-full px-3 py-3 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-gold-400 text-white text-xs outline-none cursor-pointer"
+                    className="w-full px-3 py-3 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-amber-400 text-white text-xs outline-none cursor-pointer"
                   >
                     {branches.map((b) => (
                       <option key={b.id} value={b.id}>
@@ -114,7 +114,7 @@ export const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs uppercase tracking-wider text-zinc-300 font-bold mb-1.5 flex items-center gap-1">
-                      <Calendar className="w-3.5 h-3.5 text-gold-400" />
+                      <Calendar className="w-3.5 h-3.5 text-amber-400" />
                       <span>Preferred Date</span>
                     </label>
                     <input
@@ -122,19 +122,19 @@ export const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
                       required
                       value={date}
                       onChange={(e) => setDate(e.target.value)}
-                      className="w-full px-3 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-gold-400 text-white text-xs outline-none"
+                      className="w-full px-3 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-amber-400 text-white text-xs outline-none"
                     />
                   </div>
 
                   <div>
                     <label className="block text-xs uppercase tracking-wider text-zinc-300 font-bold mb-1.5 flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5 text-gold-400" />
+                      <Clock className="w-3.5 h-3.5 text-amber-400" />
                       <span>Preferred Time</span>
                     </label>
                     <select
                       value={timeSlot}
                       onChange={(e) => setTimeSlot(e.target.value)}
-                      className="w-full px-3 py-3 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-gold-400 text-white text-xs outline-none cursor-pointer"
+                      className="w-full px-3 py-3 rounded-xl bg-zinc-900 border border-zinc-700 focus:border-amber-400 text-white text-xs outline-none cursor-pointer"
                     >
                       <option value="morning-06">06:00 AM – 08:00 AM (Early)</option>
                       <option value="morning-08">08:00 AM – 10:00 AM (Peak Morning)</option>
@@ -148,7 +148,7 @@ export const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full py-3.5 rounded-xl font-black text-xs uppercase tracking-wider bg-gradient-to-r from-gold-400 via-gold-500 to-amber-600 text-black shadow-lg shadow-gold-500/25 hover:brightness-110 active:scale-98 transition-all"
+                    className="w-full py-3.5 rounded-xl font-black text-xs uppercase tracking-wider bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-black shadow-lg shadow-amber-500/25 hover:brightness-110 active:scale-98 transition-all cursor-pointer"
                   >
                     BOOK MY TRIAL
                   </button>
@@ -160,12 +160,12 @@ export const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
             </div>
           ) : (
             <div className="text-center py-6 space-y-4">
-              <div className="w-16 h-16 rounded-full bg-gold-400/20 border border-gold-400/40 text-gold-400 flex items-center justify-center mx-auto shadow-xl">
+              <div className="w-16 h-16 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-400 flex items-center justify-center mx-auto shadow-xl">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
 
               <div className="space-y-1">
-                <span className="text-xs uppercase tracking-widest text-gold-400 font-bold">
+                <span className="text-xs uppercase tracking-widest text-amber-400 font-bold">
                   KING'S GYM PASS CONFIRMED
                 </span>
                 <h3 className="text-3xl font-black font-display text-white uppercase">
@@ -178,15 +178,15 @@ export const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
               </p>
 
               <div className="p-4 rounded-xl bg-zinc-900/80 border border-zinc-800 text-xs text-zinc-400 max-w-sm mx-auto space-y-1.5 text-left">
-                <p className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-gold-400" /> <span className="text-white font-semibold">Branch:</span> {branches.find(b => b.id === branch)?.name || 'Parvat Patiya'}</p>
-                <p className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-gold-400" /> <span className="text-white font-semibold">Date:</span> {date || 'Tomorrow'}</p>
-                <p className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5 text-gold-400" /> <span className="text-white font-semibold">Slot:</span> {timeSlot}</p>
+                <p className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-amber-400" /> <span className="text-white font-semibold">Branch:</span> {branches.find(b => b.id === branch)?.name || 'Parvat Patiya'}</p>
+                <p className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-amber-400" /> <span className="text-white font-semibold">Date:</span> {date || 'Tomorrow'}</p>
+                <p className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5 text-amber-400" /> <span className="text-white font-semibold">Slot:</span> {timeSlot}</p>
               </div>
 
               <div className="pt-4">
                 <button
                   onClick={handleResetAndClose}
-                  className="px-8 py-3 rounded-xl bg-gold-400 text-black font-bold text-xs uppercase tracking-wider hover:bg-gold-300 transition-colors"
+                  className="px-8 py-3 rounded-xl bg-amber-400 text-black font-bold text-xs uppercase tracking-wider hover:bg-amber-300 transition-colors cursor-pointer"
                 >
                   CLOSE
                 </button>

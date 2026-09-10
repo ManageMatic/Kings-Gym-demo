@@ -1,8 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { MapPin, Phone, ArrowRight, CheckCircle2, Navigation, Clock } from 'lucide-react'
-import type { Branch } from '../data/branches'
-import { WhatsAppIcon } from './SocialIcons'
+import type { Branch } from '../../data/branches'
+import { WhatsAppIcon } from '../common/SocialIcons'
 
 interface BranchCardProps {
   branch: Branch

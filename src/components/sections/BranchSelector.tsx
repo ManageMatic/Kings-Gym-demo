@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { branches, localityMap, suratLocalities } from '../data/branches'
-import type { Branch } from '../data/branches'
-import BranchCard from './BranchCard'
+import { branches, localityMap, suratLocalities } from '../../data/branches'
+import type { Branch } from '../../data/branches'
+import BranchCard from '../cards/BranchCard'
 import { MapPin, Navigation, ShieldCheck, Compass, Check, ArrowRight } from 'lucide-react'
 
 interface BranchSelectorProps {

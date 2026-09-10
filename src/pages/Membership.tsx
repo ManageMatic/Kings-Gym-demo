@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import FloatingWhatsApp from '../components/FloatingWhatsApp'
-import SectionHeading from '../components/SectionHeading'
-import MembershipCard from '../components/MembershipCard'
-import MembershipModal from '../components/MembershipModal'
-import CustomCursor from '../components/CustomCursor'
+import Navbar from '../components/layout/Navbar'
+import Footer from '../components/layout/Footer'
+import FloatingWhatsApp from '../components/layout/FloatingWhatsApp'
+import SectionHeading from '../components/common/SectionHeading'
+import MembershipCard from '../components/cards/MembershipCard'
+import MembershipModal from '../components/modals/MembershipModal'
 import { membershipPlans } from '../data/memberships'
 import { CheckCircle2, Shield } from 'lucide-react'
 
@@ -20,7 +19,6 @@ export default function MembershipPage() {
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-gold-500 selection:text-black pt-28">
-      <CustomCursor />
       <Navbar onJoinClick={() => openModal()} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
