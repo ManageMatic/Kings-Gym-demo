@@ -10,7 +10,7 @@ interface FloatingWhatsAppProps {
 
 export default function FloatingWhatsApp({ onJoinClick }: FloatingWhatsAppProps) {
   const [chatOpen, setChatOpen] = useState(false)
-  const [selectedBranch, setSelectedBranch] = useState('parvat-patiya')
+  const [selectedBranch, setSelectedBranch] = useState('model-town')
   const [userMsg, setUserMsg] = useState('Hi, I want to inquire about King\'s Gym membership and trial session in Surat.')
 
   const handleSend = () => {

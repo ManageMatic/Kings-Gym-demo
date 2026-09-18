@@ -33,13 +33,13 @@ export default function Home() {
   const [isStoryExpanded, setIsStoryExpanded] = useState(false)
   const [defaultPlan, setDefaultPlan] = useState('yearly')
   const [selectedGoalId, setSelectedGoalId] = useState('muscle')
-  const [selectedSocialTab, setSelectedSocialTab] = useState<'all' | 'parvat-patiya' | 'godadara' | 'dindoli'>('all')
+  const [selectedSocialTab, setSelectedSocialTab] = useState<'all' | 'model-town' | 'godadara' | 'dindoli'>('all')
 
   // Contact form state
   const [contactName, setContactName] = useState('')
   const [contactPhone, setContactPhone] = useState('')
   const [contactEmail, setContactEmail] = useState('')
-  const [contactBranch, setContactBranch] = useState('parvat-patiya')
+  const [contactBranch, setContactBranch] = useState('model-town')
   const [contactMsg, setContactMsg] = useState('')
   const [contactSent, setContactSent] = useState(false)
 
@@ -289,7 +289,7 @@ export default function Home() {
                     <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/10">
                       <div className="flex items-center gap-2 text-xs text-zinc-400">
                         <MapPin className="w-4 h-4 text-amber-400 shrink-0" />
-                        <span>Surat • Parvat Patiya • Godadara • Dindoli</span>
+                        <span>Surat • Model Town • Godadara • Dindoli</span>
                       </div>
                       <div className="flex items-center gap-3 w-full sm:w-auto">
                         <button
@@ -668,9 +668,9 @@ export default function Home() {
               All 3 Branches
             </button>
             <button
-              onClick={() => setSelectedSocialTab('parvat-patiya')}
+              onClick={() => setSelectedSocialTab('model-town')}
               className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer flex items-center gap-1.5 ${
-                selectedSocialTab === 'parvat-patiya'
+                selectedSocialTab === 'model-town'
                   ? 'bg-pink-500 text-white shadow-lg shadow-pink-500/20'
                   : 'bg-zinc-900 text-zinc-400 hover:text-white border border-white/5'
               }`}

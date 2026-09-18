@@ -19,7 +19,7 @@ export default function BranchesPage() {
         <SectionHeading
           label="OUR SURAT NETWORK"
           title="CHOOSE YOUR KINGDOM. 3 PREMIER GYMS."
-          subtitle="Explore our three strategically located branches across Surat: Parvat Patiya, Godadara, and Dindoli. High-end equipment, certified coaches, and dedicated discipline at every location."
+          subtitle="Explore our three strategically located branches across Surat: Model Town, Godadara, and Dindoli. High-end equipment, certified coaches, and dedicated discipline at every location."
           center
         />
 

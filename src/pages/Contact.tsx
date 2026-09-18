@@ -12,7 +12,7 @@ export default function ContactPage() {
   const [contactName, setContactName] = useState('')
   const [contactPhone, setContactPhone] = useState('')
   const [contactEmail, setContactEmail] = useState('')
-  const [contactBranch, setContactBranch] = useState('parvat-patiya')
+  const [contactBranch, setContactBranch] = useState('model-town')
   const [contactMsg, setContactMsg] = useState('')
   const [contactSent, setContactSent] = useState(false)
 

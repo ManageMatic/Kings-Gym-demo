@@ -49,7 +49,7 @@ export const membershipPlans: MembershipPlan[] = [
     billingNote: 'DEMO PRICE • BILLED SEMI-ANNUALLY',
     description: 'Serious commitment for serious results. Full multi-branch privileges and nutritional blueprint.',
     features: [
-      'Multi-Branch Passport (Parvat Patiya, Godadara, Dindoli)',
+      'Multi-Branch Passport (Model Town, Godadara, Dindoli)',
       'Customized Diet & Nutrition Consultation',
       'Monthly Bio-Metric Progress Tracking',
       'Free Access to Weekend Special Masterclasses',

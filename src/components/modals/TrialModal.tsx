@@ -11,7 +11,7 @@ interface TrialModalProps {
 export const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
-  const [branch, setBranch] = useState('parvat-patiya')
+  const [branch, setBranch] = useState('model-town')
   const [date, setDate] = useState('')
   const [timeSlot, setTimeSlot] = useState('morning-07')
   const [submitted, setSubmitted] = useState(false)
@@ -178,7 +178,7 @@ export const TrialModal: React.FC<TrialModalProps> = ({ isOpen, onClose }) => {
               </p>
 
               <div className="p-4 rounded-xl bg-zinc-900/80 border border-zinc-800 text-xs text-zinc-400 max-w-sm mx-auto space-y-1.5 text-left">
-                <p className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-amber-400" /> <span className="text-white font-semibold">Branch:</span> {branches.find(b => b.id === branch)?.name || 'Parvat Patiya'}</p>
+                <p className="flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-amber-400" /> <span className="text-white font-semibold">Branch:</span> {branches.find(b => b.id === branch)?.name || 'Model Town'}</p>
                 <p className="flex items-center gap-1.5"><Calendar className="w-3.5 h-3.5 text-amber-400" /> <span className="text-white font-semibold">Date:</span> {date || 'Tomorrow'}</p>
                 <p className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5 text-amber-400" /> <span className="text-white font-semibold">Slot:</span> {timeSlot}</p>
               </div>

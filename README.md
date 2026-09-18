@@ -21,7 +21,7 @@
 
 | Branch | Identity & Focus | Highlights |
 | :--- | :--- | :--- |
-| **01. Parvat Patiya** | *Heavy Iron Powerhouse* | Calibrated Olympic deadlift decks, heavy steel racks, competition barbells. |
+| **01. Model Town** | *Heavy Iron Powerhouse* | Calibrated Olympic deadlift decks, heavy steel racks, competition barbells. |
 | **02. Godadara** | *High-Energy Cardio & Turf* | 30m sprint turf, functional athletics area & sound-isolated Zumba studio. |
 | **03. Dindoli** | *Aesthetic Luxury & Recovery* | Biomechanical isolation machines, InBody body scans & smoothie recovery lounge. |
 
@@ -30,8 +30,8 @@
 ## 🚀 Key Features
 
 * **👑 Cinematic Dark Luxury UI**: Handcrafted color palette (`#060608` deep black, `#f5cf53` champagne gold accents, glassmorphic cards, and subtle Ken Burns image effects).
-* **📍 Interactive Multi-Branch Switcher**: Switch dynamically between Parvat Patiya, Godadara, and Dindoli with real interior photography, equipment previews, timings, and one-tap Google Maps directions.
-* **🧭 Instant Surat Locality Finder ("Which Kingdom is Yours?")**: Dropdown matching local Surat areas (Vesu, Adajan, Varachha, Ring Road, Katargam, etc.) to the nearest branch with estimated distance and travel time.
+* **📍 Interactive Multi-Branch Switcher**: Switch dynamically between Model Town, Godadara, and Dindoli with real interior photography, equipment previews, timings, and one-tap Google Maps directions.
+* **🧭 Instant Surat Locality Finder ("Which Kingdom is Yours?")**: Dropdown matching local Surat areas (Model Town, Varachha, Punagam, Ring Road, Godadara, Dindoli, etc.) to the nearest branch with accurate road distances and travel times.
 * **📖 Inline Royal Heritage & Story Showcase**: Interactive expandable story section detailing the founding vision, 11-gauge steel standards, and the 3 core pillars (*Zero Shortcuts*, *Unbroken Standard*, *Royal Brotherhood*).
 * **🎯 Dynamic Workout Goal Matcher**: Real-time interactive selector for Hypertrophy, Fat Loss, Strength, and General Fitness with tailored training splits and nutrition strategies.
 * **🖼️ Lightbox Gallery with Mobile Touch-Swipe**: Category-filtered gallery grid (Gym Floors, Training, Equipment, Events) featuring centered navigation controls, keyboard navigation (`←`/`→`/`Esc`), and full mobile touch-swipe support.

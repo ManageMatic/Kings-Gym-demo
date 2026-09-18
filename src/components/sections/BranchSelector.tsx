@@ -11,7 +11,7 @@ interface BranchSelectorProps {
 }
 
 export default function BranchSelector({ onTrialClick }: BranchSelectorProps) {
-  const [selectedBranchId, setSelectedBranchId] = useState<string>('parvat-patiya')
+  const [selectedBranchId, setSelectedBranchId] = useState<string>('model-town')
   const [selectedLocality, setSelectedLocality] = useState<string>('')
   const [locatorResult, setLocatorResult] = useState<{ branchId: string; branchName: string; distance: string; travelTime: string } | null>(null)
 

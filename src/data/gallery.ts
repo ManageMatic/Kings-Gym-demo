@@ -13,7 +13,7 @@ export const galleryItems: GalleryItem[] = [
     id: 'gal-1',
     title: 'Main Strength & Iron Deck',
     category: 'gym',
-    branch: 'Parvat Patiya',
+    branch: 'Model Town',
     src: '/images/hero.jpg',
     aspect: 'aspect-video',
     description: 'Cinematic powerlifting and machine sector featuring calibrated steel plates and ambient gold halo fixtures.',
@@ -22,7 +22,7 @@ export const galleryItems: GalleryItem[] = [
     id: 'gal-2',
     title: 'Heavy Barbell Pull Station',
     category: 'training',
-    branch: 'Parvat Patiya',
+    branch: 'Model Town',
     src: '/images/program_strength.jpg',
     aspect: 'aspect-[4/5]',
     description: 'Heavy deadlift and Olympic bar stations with sound-dampening high-density rubber drop platforms.',
@@ -58,7 +58,7 @@ export const galleryItems: GalleryItem[] = [
     id: 'gal-6',
     title: 'Elite 1-on-1 Coaching Session',
     category: 'training',
-    branch: 'Parvat Patiya',
+    branch: 'Model Town',
     src: '/images/about.jpg',
     aspect: 'aspect-[3/4]',
     description: 'Detailed form instruction, eccentric tempo control, and posture correction during compound lifts.',
@@ -67,7 +67,7 @@ export const galleryItems: GalleryItem[] = [
     id: 'gal-7',
     title: 'Heavy Dumbbell Array Up to 60kg',
     category: 'equipment',
-    branch: 'Parvat Patiya',
+    branch: 'Model Town',
     src: '/images/branch_parvat.jpg',
     aspect: 'aspect-[4/3]',
     description: 'Precision knurled solid steel dumbbells spanning from 2.5kg to 60kg in 2.5kg increments.',
@@ -129,7 +129,7 @@ export const equipmentCategories: EquipmentCategory[] = [
 
 export interface SocialPost {
   id: string
-  branchId: 'parvat-patiya' | 'godadara' | 'dindoli'
+  branchId: 'model-town' | 'godadara' | 'dindoli'
   branchName: string
   handle: string
   instagramUrl: string
@@ -144,8 +144,8 @@ export interface SocialPost {
 export const socialPosts: SocialPost[] = [
   {
     id: 'soc-1',
-    branchId: 'parvat-patiya',
-    branchName: 'Model Town / Parvat Patiya',
+    branchId: 'model-town',
+    branchName: 'Model Town Branch',
     handle: '@kingsgym_modeltown',
     instagramUrl: 'https://www.instagram.com/kingsgym_modeltown/',
     likes: '1,420',
@@ -178,12 +178,12 @@ export const socialPosts: SocialPost[] = [
   },
   {
     id: 'soc-4',
-    branchId: 'parvat-patiya',
-    branchName: 'Model Town / Parvat Patiya',
+    branchId: 'model-town',
+    branchName: 'Model Town Branch',
     handle: '@kingsgym_modeltown',
     instagramUrl: 'https://www.instagram.com/kingsgym_modeltown/',
     likes: '1,830',
-    caption: 'Heavy dumbbell pressing sector upgraded! Solid steel knurled irons ready for heavy strength work. #HeavyIron #SuratGyms',
+    caption: 'Heavy dumbbell pressing sector upgraded at Model Town! Solid steel knurled irons ready for heavy strength work. #HeavyIron #SuratGyms',
     image: '/images/branch_parvat.jpg',
     tag: 'EQUIPMENT',
   },
