@@ -10,7 +10,7 @@ import Hero from '../components/sections/Hero'
 import BranchSelector from '../components/sections/BranchSelector'
 import GalleryGrid from '../components/sections/GalleryGrid'
 import SectionHeading from '../components/common/SectionHeading'
-import { WhatsAppIcon } from '../components/common/SocialIcons'
+import { WhatsAppIcon, InstagramIcon } from '../components/common/SocialIcons'
 import ProgramCard from '../components/cards/ProgramCard'
 import TrainerCard from '../components/cards/TrainerCard'
 import MembershipCard from '../components/cards/MembershipCard'
@@ -33,6 +33,7 @@ export default function Home() {
   const [isStoryExpanded, setIsStoryExpanded] = useState(false)
   const [defaultPlan, setDefaultPlan] = useState('yearly')
   const [selectedGoalId, setSelectedGoalId] = useState('muscle')
+  const [selectedSocialTab, setSelectedSocialTab] = useState<'all' | 'parvat-patiya' | 'godadara' | 'dindoli'>('all')
 
   // Contact form state
   const [contactName, setContactName] = useState('')
@@ -43,6 +44,7 @@ export default function Home() {
   const [contactSent, setContactSent] = useState(false)
 
   const activeGoal = trainingGoals.find((g) => g.id === selectedGoalId) || trainingGoals[0]
+  const currentSocialPosts = selectedSocialTab === 'all' ? socialPosts : socialPosts.filter(p => p.branchId === selectedSocialTab)
 
   const openMembership = useCallback((planId?: string) => {
     setDefaultPlan(planId || 'yearly')
@@ -611,50 +613,155 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 15. SOCIAL MEDIA SECTION */}
-      <section className="pt-8 sm:pt-12 pb-16 sm:pb-20 bg-[#060608] relative">
+      {/* 15. SOCIAL MEDIA / INSTAGRAM INTEGRATION SECTION */}
+      <section id="social-feed" className="pt-8 sm:pt-12 pb-16 sm:pb-20 bg-[#060608] relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            label="COMMUNITY FEED"
-            title="FOLLOW THE KINGDOM."
-            subtitle="Connect with daily workout motivation, member PRs, coach spotlights, and Surat fitness energy."
+            label="OFFICIAL INSTAGRAM FEEDS"
+            title="FOLLOW THE 3 KINGDOMS."
+            subtitle="Explore live gym atmosphere, member PRs, coach tips, and high-energy workout reels across our 3 Surat branches."
             center
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {socialPosts.map((post) => (
-              <div
+          {/* 3 Official Branch Instagram Profile Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            {branches.map((b) => (
+              <a
+                key={b.id}
+                href={b.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 rounded-2xl bg-gradient-to-br from-zinc-950 via-zinc-900 to-black border border-white/10 hover:border-pink-500/50 hover:shadow-xl hover:shadow-pink-500/5 flex items-center justify-between group transition-all"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-600 p-[2px] shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-full h-full bg-black rounded-[10px] flex items-center justify-center text-pink-400">
+                      <InstagramIcon className="w-5 h-5 fill-current" />
+                    </div>
+                  </div>
+                  <div>
+                    <span className="text-[10px] uppercase font-bold text-amber-400 tracking-wider block">
+                      {b.name}
+                    </span>
+                    <span className="text-sm font-black text-white group-hover:text-pink-300 transition-colors">
+                      {b.instagramHandle}
+                    </span>
+                  </div>
+                </div>
+                <span className="px-3 py-1.5 rounded-lg bg-pink-500/10 border border-pink-500/30 text-pink-400 group-hover:bg-pink-500 group-hover:text-white text-[11px] font-bold uppercase tracking-wider transition-all">
+                  FOLLOW ↗
+                </span>
+              </a>
+            ))}
+          </div>
+
+          {/* Branch Filter Tabs */}
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
+            <button
+              onClick={() => setSelectedSocialTab('all')}
+              className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                selectedSocialTab === 'all'
+                  ? 'bg-amber-400 text-black shadow-lg shadow-amber-500/20'
+                  : 'bg-zinc-900 text-zinc-400 hover:text-white border border-white/5'
+              }`}
+            >
+              All 3 Branches
+            </button>
+            <button
+              onClick={() => setSelectedSocialTab('parvat-patiya')}
+              className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer flex items-center gap-1.5 ${
+                selectedSocialTab === 'parvat-patiya'
+                  ? 'bg-pink-500 text-white shadow-lg shadow-pink-500/20'
+                  : 'bg-zinc-900 text-zinc-400 hover:text-white border border-white/5'
+              }`}
+            >
+              <InstagramIcon className="w-3.5 h-3.5 fill-current" />
+              <span>Model Town (@kingsgym_modeltown)</span>
+            </button>
+            <button
+              onClick={() => setSelectedSocialTab('godadara')}
+              className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer flex items-center gap-1.5 ${
+                selectedSocialTab === 'godadara'
+                  ? 'bg-pink-500 text-white shadow-lg shadow-pink-500/20'
+                  : 'bg-zinc-900 text-zinc-400 hover:text-white border border-white/5'
+              }`}
+            >
+              <InstagramIcon className="w-3.5 h-3.5 fill-current" />
+              <span>Godadara (@kingsgym_godadara)</span>
+            </button>
+            <button
+              onClick={() => setSelectedSocialTab('dindoli')}
+              className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all cursor-pointer flex items-center gap-1.5 ${
+                selectedSocialTab === 'dindoli'
+                  ? 'bg-pink-500 text-white shadow-lg shadow-pink-500/20'
+                  : 'bg-zinc-900 text-zinc-400 hover:text-white border border-white/5'
+              }`}
+            >
+              <InstagramIcon className="w-3.5 h-3.5 fill-current" />
+              <span>Dindoli (@kingsgym_dindoli)</span>
+            </button>
+          </div>
+
+          {/* Social Posts Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {currentSocialPosts.map((post) => (
+              <a
                 key={post.id}
-                className="rounded-2xl overflow-hidden bg-zinc-950/80 border border-white/10 hover:border-amber-400/40 p-3 space-y-2 transition-colors"
+                href={post.postUrl || post.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-2xl overflow-hidden bg-zinc-950/90 border border-white/10 hover:border-pink-500/40 p-3 space-y-3 transition-all hover:-translate-y-1 block"
               >
                 <div className="relative aspect-square rounded-xl overflow-hidden">
                   <img
                     src={post.image}
                     alt={post.caption}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <span className="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/80 text-[9px] font-bold text-amber-400 uppercase">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                  
+                  <span className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-md bg-black/80 backdrop-blur-md text-[10px] font-bold text-amber-400 uppercase border border-white/10">
                     {post.tag}
                   </span>
-                  <span className="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/80 text-[9px] text-zinc-300">
-                    ❤️ {post.likes}
-                  </span>
+
+                  {post.isReel && (
+                    <span className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-pink-600/90 backdrop-blur-md text-[10px] font-bold text-white uppercase flex items-center gap-1">
+                      ▶ REEL
+                    </span>
+                  )}
+
+                  <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-[11px] text-white">
+                    <span className="font-semibold bg-black/70 px-2 py-0.5 rounded backdrop-blur-md">
+                      ❤️ {post.likes}
+                    </span>
+                    <span className="text-[10px] text-pink-300 font-bold bg-pink-950/80 border border-pink-500/30 px-2 py-0.5 rounded flex items-center gap-1">
+                      <InstagramIcon className="w-3 h-3 fill-current" />
+                      <span>VIEW POST ↗</span>
+                    </span>
+                  </div>
                 </div>
+
                 <div>
-                  <span className="text-xs font-bold text-white block">{post.handle}</span>
-                  <p className="text-xs text-zinc-400 mt-0.5 line-clamp-2 font-light">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-white group-hover:text-pink-300 transition-colors">
+                      {post.handle}
+                    </span>
+                    <span className="text-[10px] text-amber-400 font-medium">
+                      {post.branchName}
+                    </span>
+                  </div>
+                  <p className="text-xs text-zinc-400 mt-1 line-clamp-2 font-light leading-relaxed">
                     {post.caption}
                   </p>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
 
-          <div className="mt-6 text-center">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-white/10 text-xs font-bold uppercase tracking-wider text-zinc-200 hover:text-amber-400 transition-colors cursor-pointer">
-              <svg className="w-4 h-4 fill-current text-amber-400" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              <span>FOLLOW KING'S GYM (DEMO LINK)</span>
-            </span>
+          <div className="mt-8 text-center">
+            <p className="text-xs text-zinc-400 font-light">
+              Follow all 3 verified accounts on Instagram for daily workout schedules, branch timings & transformation spotlights.
+            </p>
           </div>
         </div>
       </section>

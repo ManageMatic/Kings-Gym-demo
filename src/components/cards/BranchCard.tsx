@@ -1,8 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { MapPin, Phone, ArrowRight, CheckCircle2, Navigation, Clock } from 'lucide-react'
+import { MapPin, ArrowRight, CheckCircle2, Navigation, Clock } from 'lucide-react'
 import type { Branch } from '../../data/branches'
-import { WhatsAppIcon } from '../common/SocialIcons'
+import { WhatsAppIcon, InstagramIcon } from '../common/SocialIcons'
 
 interface BranchCardProps {
   branch: Branch
@@ -128,9 +128,16 @@ export const BranchCard: React.FC<BranchCardProps> = ({
           </div>
 
           <div className="flex items-center justify-between text-[11px] text-zinc-400 px-1 pt-1">
-            <span className="flex items-center gap-1 text-zinc-400">
-              <Phone className="w-3 h-3 text-amber-400" /> {branch.phone}
-            </span>
+            <a
+              href={branch.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="flex items-center gap-1.5 text-pink-400 hover:text-pink-300 font-semibold transition-colors"
+            >
+              <InstagramIcon className="w-3.5 h-3.5 fill-current" />
+              <span>{branch.instagramHandle}</span>
+            </a>
             <a
               href={whatsappUrl}
               target="_blank"

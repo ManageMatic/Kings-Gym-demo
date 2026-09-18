@@ -129,45 +129,85 @@ export const equipmentCategories: EquipmentCategory[] = [
 
 export interface SocialPost {
   id: string
+  branchId: 'parvat-patiya' | 'godadara' | 'dindoli'
+  branchName: string
   handle: string
+  instagramUrl: string
+  postUrl?: string
   likes: string
   caption: string
   image: string
   tag: string
+  isReel?: boolean
 }
 
 export const socialPosts: SocialPost[] = [
   {
     id: 'soc-1',
-    handle: '@kingsgym.surat (Demo)',
+    branchId: 'parvat-patiya',
+    branchName: 'Model Town / Parvat Patiya',
+    handle: '@kingsgym_modeltown',
+    instagramUrl: 'https://www.instagram.com/kingsgym_modeltown/',
     likes: '1,420',
-    caption: 'The standard is unwavering. Heavy iron, deep focus, zero excuses. Train like a King today. #KingsGymSurat #TrainLikeAKing',
+    caption: 'The standard is unwavering. Heavy iron, deep focus, zero excuses. Train like a King at Model Town branch! #KingsGymSurat #ModelTown #TrainLikeAKing',
     image: '/images/hero.jpg',
-    tag: 'POWER FLOOR',
+    tag: 'POWER DECK',
   },
   {
     id: 'soc-2',
-    handle: '@kingsgym.surat (Demo)',
-    likes: '984',
-    caption: 'Saturday Zumba energy at Godadara branch was off the charts! ⚡ Join our next weekend high-energy burn session. #SuratFitness',
+    branchId: 'godadara',
+    branchName: 'Godadara Branch',
+    handle: '@kingsgym_godadara',
+    instagramUrl: 'https://www.instagram.com/kingsgym_godadara/',
+    likes: '1,890',
+    caption: 'High-energy Zumba & HIIT session at Godadara! ⚡ Pure adrenaline and unmatched community spirit. Come crush your cardio goals. #Godadara #SuratFitness',
     image: '/images/program_zumba.jpg',
-    tag: 'ZUMBA SQUAD',
+    tag: 'ZUMBA ARENA',
+    isReel: true,
   },
   {
     id: 'soc-3',
-    handle: '@kingsgym.surat (Demo)',
+    branchId: 'dindoli',
+    branchName: 'Dindoli Branch',
+    handle: '@kingsgym_dindoli',
+    instagramUrl: 'https://www.instagram.com/kingsgym_dindoli/',
     likes: '2,110',
-    caption: 'Personal coaching milestone: Form is temporary, discipline is permanent. Shoutout to our dedicated members! #BodyTransformation',
-    image: '/images/about.jpg',
-    tag: 'COACHING',
+    caption: 'Luxury aesthetic lifting at Dindoli branch. Precision biomechanical machine deck and dedicated 1-on-1 personal coaching. #Dindoli #Aesthetics',
+    image: '/images/branch_dindoli.jpg',
+    tag: 'AESTHETICS',
   },
   {
     id: 'soc-4',
-    handle: '@kingsgym.surat (Demo)',
+    branchId: 'parvat-patiya',
+    branchName: 'Model Town / Parvat Patiya',
+    handle: '@kingsgym_modeltown',
+    instagramUrl: 'https://www.instagram.com/kingsgym_modeltown/',
     likes: '1,830',
-    caption: 'New equipment arrival at Parvat Patiya! 60kg dumbbells ready for those heavy pressing days. #HeavyIron #SuratGyms',
+    caption: 'Heavy dumbbell pressing sector upgraded! Solid steel knurled irons ready for heavy strength work. #HeavyIron #SuratGyms',
     image: '/images/branch_parvat.jpg',
-    tag: 'NEW ARRIVALS',
+    tag: 'EQUIPMENT',
+  },
+  {
+    id: 'soc-5',
+    branchId: 'godadara',
+    branchName: 'Godadara Branch',
+    handle: '@kingsgym_godadara',
+    instagramUrl: 'https://www.instagram.com/kingsgym_godadara/',
+    likes: '1,340',
+    caption: '30m sprint turf drills & functional athletic conditioning in full swing at Godadara! #FunctionalTraining #Athletics',
+    image: '/images/branch_godadara.jpg',
+    tag: 'SPRINT TURF',
+  },
+  {
+    id: 'soc-6',
+    branchId: 'dindoli',
+    branchName: 'Dindoli Branch',
+    handle: '@kingsgym_dindoli',
+    instagramUrl: 'https://www.instagram.com/kingsgym_dindoli/',
+    likes: '1,670',
+    caption: 'Post-workout recovery & protein shake lounge at Dindoli. Refuel your body the royal way. #RecoveryZone #KingsGym',
+    image: '/images/about.jpg',
+    tag: 'COACHING',
   },
 ]
 

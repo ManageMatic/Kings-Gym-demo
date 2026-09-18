@@ -46,9 +46,15 @@ export default function Footer() {
                 </div>
 
                 <div className="pt-2 flex items-center justify-between border-t border-zinc-800/80">
-                  <span className="text-[11px] text-zinc-400 font-mono">
-                    {b.phone}
-                  </span>
+                  <a
+                    href={b.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs text-pink-400 hover:text-pink-300 font-semibold transition-colors"
+                  >
+                    <InstagramIcon className="w-3.5 h-3.5 fill-current" />
+                    <span>{b.instagramHandle}</span>
+                  </a>
                   <a
                     href={b.mapsUrl}
                     target="_blank"

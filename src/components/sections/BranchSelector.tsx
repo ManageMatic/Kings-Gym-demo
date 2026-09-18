@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { branches, localityMap, suratLocalities } from '../../data/branches'
 import type { Branch } from '../../data/branches'
 import BranchCard from '../cards/BranchCard'
+import { InstagramIcon } from '../common/SocialIcons'
 import { MapPin, Navigation, ShieldCheck, Compass, Check, ArrowRight } from 'lucide-react'
 
 interface BranchSelectorProps {
@@ -126,7 +127,17 @@ export default function BranchSelector({ onTrialClick }: BranchSelectorProps) {
                     className="btn-secondary text-xs"
                   >
                     <Navigation className="w-3.5 h-3.5 text-amber-400" />
-                    <span>GOOGLE MAPS DIRECTIONS</span>
+                    <span>GOOGLE MAPS</span>
+                  </a>
+
+                  <a
+                    href={activeBranch.instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-3 rounded-xl bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-amber-500/10 border border-pink-500/30 hover:border-pink-500/60 text-pink-300 hover:text-white font-bold text-xs flex items-center gap-2 transition-all"
+                  >
+                    <InstagramIcon className="w-3.5 h-3.5 fill-current text-pink-400" />
+                    <span>{activeBranch.instagramHandle}</span>
                   </a>
                 </div>
               </motion.div>

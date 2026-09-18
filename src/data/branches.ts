@@ -9,6 +9,8 @@ export interface Branch {
   timings: string
   phone: string
   whatsapp: string
+  instagramHandle: string
+  instagramUrl: string
   image: string
   facilities: string[]
   programs: string[]
@@ -20,14 +22,16 @@ export const branches: Branch[] = [
   {
     id: 'parvat-patiya',
     num: 'BRANCH 01',
-    name: 'PARVAT PATIYA',
+    name: 'MODEL TOWN',
     tagline: 'Heavy Iron & Strength Performance Kingdom',
-    address: 'Shree Punjan Plaza, opposite Dhumbhal Fire Station, Surat, Gujarat 395010',
+    address: 'Shree Punjan Plaza, opposite Dhumbhal Fire Station, Model Town / Parvat Patiya, Surat, Gujarat 395010',
     landmark: 'Opposite Dhumbhal Fire Station',
     city: 'Surat, Gujarat',
-    timings: 'Mon – Sat: 05:30 AM – 10:30 PM | Sun: 06:00 AM – 01:00 PM (Demo Timing)',
+    timings: 'Mon – Sat: 05:30 AM – 10:30 PM | Sun: 06:00 AM – 01:00 PM',
     phone: '+91 98XXX XXXXX (Add Official Number)',
     whatsapp: '+91 98XXX XXXXX (Add Official WhatsApp)',
+    instagramHandle: '@kingsgym_modeltown',
+    instagramUrl: 'https://www.instagram.com/kingsgym_modeltown/',
     image: '/images/branch_parvat.jpg',
     facilities: [
       'Heavy Dumbbells (up to 60kg)',
@@ -49,9 +53,11 @@ export const branches: Branch[] = [
     address: 'Near Maharana Pratap Chowk Main Road, Godadara, Surat, Gujarat 395012',
     landmark: 'Near Maharana Pratap Chowk',
     city: 'Surat, Gujarat',
-    timings: 'Mon – Sat: 05:30 AM – 10:30 PM | Sun: 06:00 AM – 01:00 PM (Demo Timing)',
+    timings: 'Mon – Sat: 05:30 AM – 10:30 PM | Sun: 06:00 AM – 01:00 PM',
     phone: '+91 98XXX XXXXX (Add Official Number)',
     whatsapp: '+91 98XXX XXXXX (Add Official WhatsApp)',
+    instagramHandle: '@kingsgym_godadara',
+    instagramUrl: 'https://www.instagram.com/kingsgym_godadara/',
     image: '/images/branch_godadara.jpg',
     facilities: [
       '30m Indoor Turf Sprint Track',
@@ -63,7 +69,7 @@ export const branches: Branch[] = [
     ],
     programs: ['Zumba & Dance Fitness', 'Functional HIIT', 'Fat Loss', 'Strength Training'],
     mapsUrl: 'https://maps.google.com/?q=Godadara+Surat+Gujarat',
-    coordinatesNote: 'Demo Location — Confirm exact building name with gym owner',
+    coordinatesNote: 'Demo Location — Near Maharana Pratap Chowk',
   },
   {
     id: 'dindoli',
@@ -73,9 +79,11 @@ export const branches: Branch[] = [
     address: 'Kharwasa Road / Royal Arcade Zone, Dindoli, Surat, Gujarat 394210',
     landmark: 'Kharwasa Main Road',
     city: 'Surat, Gujarat',
-    timings: 'Mon – Sat: 05:30 AM – 10:30 PM | Sun: 06:00 AM – 01:00 PM (Demo Timing)',
+    timings: 'Mon – Sat: 05:30 AM – 10:30 PM | Sun: 06:00 AM – 01:00 PM',
     phone: '+91 98XXX XXXXX (Add Official Number)',
     whatsapp: '+91 98XXX XXXXX (Add Official WhatsApp)',
+    instagramHandle: '@kingsgym_dindoli',
+    instagramUrl: 'https://www.instagram.com/kingsgym_dindoli/',
     image: '/images/branch_dindoli.jpg',
     facilities: [
       'Biomechanical Pin-Loaded Machine Deck',
@@ -87,7 +95,7 @@ export const branches: Branch[] = [
     ],
     programs: ['Personal Training', 'Muscle Building', 'General Fitness', 'Postural Correction'],
     mapsUrl: 'https://maps.google.com/?q=Dindoli+Surat+Gujarat',
-    coordinatesNote: 'Demo Location — Confirm exact building name with gym owner',
+    coordinatesNote: 'Demo Location — Kharwasa Road / Royal Arcade Zone',
   },
 ]
 
