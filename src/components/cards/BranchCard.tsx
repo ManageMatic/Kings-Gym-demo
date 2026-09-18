@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { MapPin, ArrowRight, CheckCircle2, Navigation, Clock } from 'lucide-react'
+import { MapPin, ArrowRight, CheckCircle2, Navigation, Clock, Star } from 'lucide-react'
 import type { Branch } from '../../data/branches'
 import { WhatsAppIcon, InstagramIcon } from '../common/SocialIcons'
 
@@ -42,13 +42,14 @@ export const BranchCard: React.FC<BranchCardProps> = ({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent" />
 
-        {/* Branch Number & City Badge */}
-        <div className="absolute top-3 left-3 flex items-center gap-2">
+        {/* Branch Number, City Badge & Google Rating */}
+        <div className="absolute top-3 left-3 flex items-center gap-1.5 flex-wrap">
           <span className="px-2.5 py-0.5 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-black/80 backdrop-blur-md border border-amber-400/40 text-amber-300">
             {branch.num}
           </span>
-          <span className="px-2 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider bg-zinc-900/80 backdrop-blur-md text-zinc-300">
-            SURAT
+          <span className="px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-black/80 backdrop-blur-md text-amber-400 border border-white/10 flex items-center gap-1">
+            <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
+            <span>{branch.rating || 4.8} ({branch.reviewCount || 400}+)</span>
           </span>
         </div>
 

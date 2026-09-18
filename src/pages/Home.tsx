@@ -847,13 +847,13 @@ export default function Home() {
                       DIRECT PHONE
                     </span>
                     <span className="text-xs sm:text-sm font-semibold text-white">
-                      +91 98XXX XXXXX (ADD OFFICIAL PHONE)
+                      +91 97232 72262 / +91 87330 79422
                     </span>
                   </div>
                 </div>
 
                 <a
-                  href="https://wa.me/?text=Hi%2C%20I%20want%20to%20inquire%20about%20King%27s%20Gym%20Surat"
+                  href="https://wa.me/919723272262?text=Hi%20King%27s%20Gym%20Surat%2C%20I%20want%20to%20inquire%20about%20membership"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3.5 rounded-2xl bg-zinc-950/80 border border-emerald-500/30 hover:border-emerald-500/60 hover:bg-emerald-950/20 transition-all flex items-center justify-between group"
@@ -867,7 +867,7 @@ export default function Home() {
                         WHATSAPP CHAT (INSTANT RESPONSE)
                       </span>
                       <span className="text-xs sm:text-sm font-semibold text-white">
-                        +91 98XXX XXXXX (CLICK TO CHAT)
+                        +91 97232 72262 (CLICK TO CHAT)
                       </span>
                     </div>
                   </div>

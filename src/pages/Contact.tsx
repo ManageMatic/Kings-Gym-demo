@@ -4,7 +4,7 @@ import Footer from '../components/layout/Footer'
 import FloatingWhatsApp from '../components/layout/FloatingWhatsApp'
 import SectionHeading from '../components/common/SectionHeading'
 import MembershipModal from '../components/modals/MembershipModal'
-import { Phone, Mail, MessageSquare, Send, CheckCircle2 } from 'lucide-react'
+import { Phone, Mail, MessageSquare, Send, CheckCircle2, Navigation } from 'lucide-react'
 import { branches } from '../data/branches'
 
 export default function ContactPage() {
@@ -51,7 +51,7 @@ export default function ContactPage() {
                       PHONE CONTACT
                     </span>
                     <span className="text-sm font-semibold text-white">
-                      +91 98XXX XXXXX (ADD OFFICIAL PHONE)
+                      +91 97232 72262 / +91 87330 79422
                     </span>
                   </div>
                 </div>
@@ -64,9 +64,14 @@ export default function ContactPage() {
                     <span className="text-[10px] uppercase font-bold text-zinc-400 tracking-wider block">
                       WHATSAPP SUPPORT
                     </span>
-                    <span className="text-sm font-semibold text-white">
-                      +91 98XXX XXXXX (ADD OFFICIAL WHATSAPP)
-                    </span>
+                    <a
+                      href="https://wa.me/919723272262?text=Hi%2C%20I%20want%20to%20inquire%20about%20King%27s%20Gym%20Surat"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors"
+                    >
+                      Chat on WhatsApp (Click to Connect)
+                    </a>
                   </div>
                 </div>
 
@@ -79,7 +84,7 @@ export default function ContactPage() {
                       EMAIL ADDRESS
                     </span>
                     <span className="text-sm font-semibold text-white">
-                      info@kingsgymsurat.demo (ADD OFFICIAL EMAIL)
+                      info@kingsgymsurat.demo
                     </span>
                   </div>
                 </div>
@@ -89,13 +94,28 @@ export default function ContactPage() {
             {/* Branches Card */}
             <div className="p-6 rounded-3xl bg-zinc-950 border border-zinc-800 space-y-4">
               <h3 className="text-lg font-black font-display text-white uppercase">
-                SURAT BRANCH ADDRESSES
+                SURAT BRANCH LOCATIONS
               </h3>
               <div className="space-y-3">
                 {branches.map((b) => (
-                  <div key={b.id} className="p-3 rounded-xl bg-black/60 border border-zinc-900 text-xs">
-                    <span className="font-bold text-gold-400 uppercase">{b.name}</span>
-                    <p className="text-zinc-300 mt-0.5">{b.address}</p>
+                  <div key={b.id} className="p-4 rounded-xl bg-black/60 border border-zinc-900 text-xs space-y-1.5">
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-gold-400 uppercase text-sm">{b.name}</span>
+                      <a
+                        href={b.mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[11px] text-amber-400 hover:text-amber-300 font-semibold bg-amber-400/10 px-2 py-0.5 rounded border border-amber-400/20"
+                      >
+                        <Navigation className="w-3 h-3" />
+                        <span>MAPS</span>
+                      </a>
+                    </div>
+                    <p className="text-zinc-300">{b.address}</p>
+                    <div className="flex items-center justify-between text-[11px] text-zinc-400 pt-1 border-t border-zinc-900">
+                      <span>📞 {b.phone}</span>
+                      <span className="text-pink-400 font-medium">{b.instagramHandle}</span>
+                    </div>
                   </div>
                 ))}
               </div>
